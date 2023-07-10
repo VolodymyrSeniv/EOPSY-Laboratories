@@ -1,0 +1,52 @@
+﻿@model Blogs
+<form method = "post" asp-action="DisplayPost">
+    <input asp-for="TableID" hidden></input>
+    <div class = "border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Display Blog</h2>
+            <hr />
+        </div>
+          <div class = "mb - 3">
+            <label asp-for="TimeOfCreation"></label>
+            <br />
+            <input asp-for="TimeOfCreation" disabled class="form-control" />
+        </div>
+         <div class = "mb - 3">
+            <label asp-for="CreatedUserID"></label>
+            <br />
+            <input asp-for="CreatedUserID" disabled class="form-control" />
+        </div>
+         <div class = "mb - 3">
+            <label asp-for="CreatedUserEmail"></label>
+            <br />
+            <input asp-for="CreatedUserEmail" disabled class="form-control" />
+        </div>
+        <div class = "mb - 3">
+            <label asp-for="BlogID"></label>
+            <br />
+            <input asp-for="BlogID" disabled class="form-control" />
+        </div>
+        <div class = "mb - 3">
+            <label asp-for="BlogTitle"></label>
+            <br />
+            <input asp-for="BlogTitle" disabled class="form-control" />
+        </div>
+
+         <div class = "mb - 3">
+            <label asp-for="BlogContent"></label>
+            <br />
+            <textarea asp-for="BlogContent" disabled class="form-control" style="height:150px" ><</textarea>
+        </div>
+          <br />
+        <a asp-controller = "Blogs" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to list
+        </a>
+    </div>
+
+</form>
+
+@section Scripts{
+@{
+<partial name="_ValidationScriptsPartial"></partial>
+}
+}
